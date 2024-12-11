@@ -5,7 +5,15 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100%'
+					}
+				}
+			}
+		}
 	},
 
 	plugins: [typography]
