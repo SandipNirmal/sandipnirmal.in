@@ -159,7 +159,13 @@ const config: Phaser.Types.Core.GameConfig = {
 			debug: false
 		}
 	},
-	scene: Game
+	scene: Game,
+	scale: {
+		parent: 'game-container',
+		mode: Phaser.Scale.FIT,
+		width: 800,
+		height: 600
+	}
 };
 
 const StartGame = (parent: string) => {
