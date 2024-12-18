@@ -22,4 +22,4 @@
 	});
 </script>
 
-<div id="game-container"></div>
+<div id="game-container" class="flex justify-center"></div>
