@@ -13,12 +13,14 @@
 		class="supports-backdrop-blur:bg-white/60 sticky top-0 z-40 w-full flex-none backdrop-blur lg:z-50"
 	>
 		<div class="px-4 py-3 lg:px-8">
-			<div class="mx-auto max-w-7xl px-4">
+			<div class="mx-auto max-w-7xl">
 				<header class="relative flex items-center">
 					<h2 class="font-bold sm:text-2xl dark:text-white">
-						<a href="/">Sandip Nirmal</a>
+						<a href="/">
+							<img src="/logo.png" alt="Sandip Nirmal" class="h-16 w-16 rounded-full" />
+						</a>
 					</h2>
-					<div class="relative ml-auto hidden items-center lg:flex">
+					<div class="relative ml-auto flex items-center">
 						<Navbar />
 						<div
 							class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800"
@@ -42,6 +44,6 @@
 	<footer
 		class="mx-auto max-w-5xl border-t border-slate-900/10 p-4 lg:px-8 dark:border-slate-300/10"
 	>
-		<Navbar />
+		<!-- <Navbar /> -->
 	</footer>
 </div>
