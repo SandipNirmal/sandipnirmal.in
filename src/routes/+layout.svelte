@@ -6,32 +6,42 @@
 	let { children } = $props();
 </script>
 
-<article
-	class="h-full w-full bg-slate-200 transition-colors duration-500 ease-in-out dark:bg-black"
+<div
+	class="relative mx-auto h-full min-h-screen w-screen overflow-x-hidden bg-white/95 antialiased transition-colors duration-500 ease-in-out dark:bg-zinc-900"
 >
 	<div
-		class="container relative mx-auto bg-white px-4 shadow-md transition-colors sm:px-8 lg:px-12 dark:bg-zinc-900"
+		class="supports-backdrop-blur:bg-white/60 sticky top-0 z-40 w-full flex-none backdrop-blur lg:z-50"
 	>
-		<div class="mx-auto max-w-2xl lg:max-w-5xl">
-			<header class="flex items-center justify-between gap-4 py-4">
-				<h2 class="text-2xl font-bold dark:text-white">
-					<a href="/">Sandip Nirmal</a>
-				</h2>
-				<div class="flex items-center gap-2">
-					<Navbar />
-					<ThemeSwitcher />
-				</div>
-			</header>
-
-			<main class="min-h-screen py-8 pb-12">
-				<div class="mt-16">
-					<article class="prose dark:prose-invert">
-						{@render children()}
-					</article>
-				</div>
-			</main>
-
-			<footer class="border-t border-t-gray-600 py-8 dark:border-t-slate-400"></footer>
+		<div class="px-4 py-3 lg:px-8">
+			<div class="mx-auto max-w-[1440px] px-4">
+				<header class="relative flex items-center">
+					<h2 class="font-bold sm:text-2xl dark:text-white">
+						<a href="/">Sandip Nirmal</a>
+					</h2>
+					<div class="relative ml-auto hidden items-center lg:flex">
+						<Navbar />
+						<div
+							class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800"
+						>
+							<ThemeSwitcher />
+						</div>
+					</div>
+				</header>
+			</div>
 		</div>
 	</div>
-</article>
+
+	<main class="mx-auto mt-10 max-w-[52rem] px-4 pb-28 sm:px-6 md:px-8 lg:max-w-6xl xl:px-12">
+		<div class="mt-16">
+			<article class="prose dark:prose-invert">
+				{@render children()}
+			</article>
+		</div>
+	</main>
+
+	<footer
+		class="mx-auto max-w-5xl border-t border-slate-900/10 p-4 lg:px-8 dark:border-slate-300/10"
+	>
+		<Navbar />
+	</footer>
+</div>

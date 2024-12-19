@@ -4,7 +4,9 @@
 
 	let currentTheme: 'light' | 'dark' = $state(
 		browser
-			? localStorage.theme || window.matchMedia('(prefers-color-scheme: dark)').matches
+			? localStorage.getItem('theme') === 'dark' ||
+				(!localStorage.getItem('theme') &&
+					window.matchMedia('(prefers-color-scheme: dark)').matches)
 				? 'dark'
 				: 'light'
 			: 'light'
@@ -38,7 +40,7 @@
 
 <div>
 	<button
-		class="h-9 w-9 rounded-full bg-slate-200 text-xl ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-white/10"
+		class="h-8 w-8 rounded-full bg-slate-200 text-xl ring-1 ring-zinc-900/5 dark:bg-zinc-800 dark:ring-white/10"
 		onclick={toggleMode}
 	>
 		{#if currentTheme === 'light'}
