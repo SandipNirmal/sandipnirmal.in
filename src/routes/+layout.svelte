@@ -7,13 +7,13 @@
 </script>
 
 <div
-	class="relative mx-auto h-full min-h-screen w-screen overflow-x-hidden bg-white/95 antialiased transition-colors duration-500 ease-in-out dark:bg-zinc-900"
+	class="relative mx-auto h-full min-h-screen w-screen bg-white/95 antialiased transition-colors duration-500 ease-in-out dark:bg-zinc-900"
 >
 	<div
 		class="supports-backdrop-blur:bg-white/60 sticky top-0 z-40 w-full flex-none backdrop-blur lg:z-50"
 	>
 		<div class="px-4 py-3 lg:px-8">
-			<div class="mx-auto max-w-[1440px] px-4">
+			<div class="mx-auto max-w-7xl px-4">
 				<header class="relative flex items-center">
 					<h2 class="font-bold sm:text-2xl dark:text-white">
 						<a href="/">Sandip Nirmal</a>
