@@ -23,7 +23,7 @@
 					<div class="relative ml-auto flex items-center">
 						<Navbar />
 						<div
-							class="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800"
+							class="mx-2 flex items-center border-l border-slate-200 pl-2 sm:mx-4 sm:pl-6 dark:border-slate-800"
 						>
 							<ThemeSwitcher />
 						</div>
