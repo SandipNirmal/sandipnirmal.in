@@ -28,7 +28,12 @@
 
 <div class="mt-6 flex gap-6">
 	{#each socials as social}
-		<a class="group -m-1 p-1" aria-label={`Follow on ${social.name}`} href={social.url}>
+		<a
+			class="group -m-1 p-1"
+			aria-label={`Follow on ${social.name}`}
+			href={social.url}
+			target="_blank"
+		>
 			<svg
 				viewBox="0 0 24 24"
 				aria-hidden="true"
