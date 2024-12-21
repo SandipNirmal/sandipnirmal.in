@@ -39,6 +39,6 @@
 	</section>
 	<section class="py-12">
 		<h2 class="text-3xl font-bold">Experience</h2>
-		<Experience />
+		<Experience size="md" />
 	</section>
 </article>

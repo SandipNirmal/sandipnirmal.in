@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { exeriences } from '$lib/data/experience.ts';
+	import { exeriences } from '$lib/data/experience';
 	let { size } = $props();
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/components/Navbar.svelte';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
-	import { navs } from '$lib/components/navs.ts';
+	import { navs } from '$lib/data/navs';
 
 	import '../app.css';
 	let { children } = $props();

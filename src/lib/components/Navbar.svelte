@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { page } from '$app/stores';
-	import { navs } from '$lib/components/navs';
+	import { navs } from '$lib/data/navs';
 
 	let isNavOpen = $state(false);
 
