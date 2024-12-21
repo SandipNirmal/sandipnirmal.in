@@ -14,7 +14,7 @@
 				/>
 				<div class="py-1 pl-4 {size === 'sm' ? 'flex items-center' : ''}">
 					<h5 class="font-semibold">{exerience.company}</h5>
-					<p class="py-1 pl-2 text-xs text-zinc-700 dark:text-zinc-300">
+					<p class="py-1 text-xs text-zinc-700 dark:text-zinc-300 {size === 'sm' ? 'pl-2' : ''}">
 						{exerience.start} - {exerience.end}
 					</p>
 				</div>
