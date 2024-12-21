@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/components/Navbar.svelte';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
+	import { navs } from '$lib/components/navs.ts';
 
 	import '../app.css';
 	let { children } = $props();
@@ -33,15 +34,19 @@
 
 	<main class="mx-auto mt-10 max-w-[52rem] px-4 pb-28 sm:px-6 md:px-8 lg:max-w-6xl xl:px-12">
 		<div class="mt-16">
-			<article class="prose dark:prose-invert">
-				{@render children()}
-			</article>
+			{@render children()}
 		</div>
 	</main>
 
 	<footer
-		class="mx-auto max-w-5xl border-t border-slate-900/10 p-4 lg:px-8 dark:border-slate-300/10"
+		class="mx-auto max-w-5xl border-t border-slate-900/10 p-6 py-8 lg:px-8 dark:border-slate-300/10"
 	>
-		<!-- <Navbar /> -->
+		<ul class="flex space-x-4 text-sm text-zinc-800 dark:text-slate-300">
+			{#each navs as nav}
+				{#if nav.enabled}
+					<li><a href={nav.link}>{nav.name}</a></li>
+				{/if}
+			{/each}
+		</ul>
 	</footer>
 </div>

@@ -1,31 +1,9 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { page } from '$app/stores';
+	import { navs } from '$lib/components/navs';
 
 	let isNavOpen = $state(false);
-
-	const navs = [
-		{
-			name: 'Articles',
-			link: '/articles',
-			enabled: true
-		},
-		{
-			name: 'Apps',
-			link: '/apps',
-			enabled: false
-		},
-		{
-			name: 'Games',
-			link: '/games',
-			enabled: true
-		},
-		{
-			name: 'About',
-			link: '/about',
-			enabled: true
-		}
-	];
 
 	function toggleNavModal() {
 		isNavOpen = !isNavOpen;
