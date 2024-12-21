@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
+	import { page } from '$app/stores';
+
 	let isNavOpen = $state(false);
 
 	const navs = [
@@ -33,7 +36,11 @@
 	<ul class="flex space-x-10">
 		{#each navs as nav}
 			{#if nav.enabled}
-				<li>
+				<li
+					class="border-teal-400 {$page.url.pathname === nav.link
+						? 'border-b text-teal-500'
+						: 'border-0'}"
+				>
 					<a
 						href={nav.link}
 						class="px-2 py-1 transition hover:text-teal-500 focus:text-teal-500 dark:hover:text-teal-400 dark:focus:text-teal-400"
@@ -93,13 +100,15 @@
 				</svg>
 			</button>
 			<nav class="text-sm font-semibold leading-8 text-slate-700 dark:text-slate-200">
-				<ul class="space-y-6">
+				<ul class="space-y-6 transition">
 					{#each navs as nav}
 						{#if nav.enabled}
 							<li
+								in:slide|global
 								class="w-full transition hover:text-teal-500 focus:text-teal-500 dark:hover:text-teal-400 dark:focus:text-teal-400"
+								class:text-teal-500={$page.url.pathname === nav.link}
 							>
-								<a href={nav.link} class="px-2 py-1">
+								<a href={nav.link} class="block px-2">
 									{nav.name}
 								</a>
 							</li>

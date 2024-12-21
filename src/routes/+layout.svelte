@@ -20,11 +20,9 @@
 							<img src="/logo.png" alt="Sandip Nirmal" class="h-16 w-16 rounded-full" />
 						</a>
 					</h2>
-					<div class="relative ml-auto flex items-center">
+					<div class="relative ml-auto flex flex-row-reverse items-center sm:flex-row">
 						<Navbar />
-						<div
-							class="mx-2 flex items-center border-l border-slate-200 pl-2 sm:mx-4 sm:pl-6 dark:border-slate-800"
-						>
+						<div class="mx-2 flex items-center pl-2 sm:mx-4 sm:pl-6">
 							<ThemeSwitcher />
 						</div>
 					</div>
