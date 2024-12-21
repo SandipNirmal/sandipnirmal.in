@@ -9,7 +9,7 @@
 </svelte:head>
 
 <article>
-	<div class="flex flex-wrap">
+	<section class="flex flex-wrap justify-between">
 		<div class="max-w-2xl pr-12">
 			<div>
 				<h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
@@ -28,8 +28,11 @@
 			</div>
 		</div>
 		<div class="my w-80 pt-16">
-			<h4 class="text-lg font-semibold">Work Experience</h4>
+			<h4 class="text-xl font-semibold">Work Experience</h4>
 			<Experience size="sm" />
 		</div>
-	</div>
+	</section>
+	<section class="py-8">
+		<h4 class="text-xl font-semibold">Recent Articles</h4>
+	</section>
 </article>

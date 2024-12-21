@@ -86,7 +86,7 @@
 								class="w-full transition hover:text-teal-500 focus:text-teal-500 dark:hover:text-teal-400 dark:focus:text-teal-400"
 								class:text-teal-500={$page.url.pathname === nav.link}
 							>
-								<a href={nav.link} class="block px-2">
+								<a href={nav.link} class="block px-2" onclick={toggleNavModal}>
 									{nav.name}
 								</a>
 							</li>
