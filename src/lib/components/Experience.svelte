@@ -3,7 +3,7 @@
 	let { size } = $props();
 </script>
 
-<div class="flex flex-wrap py-8">
+<div class="flex flex-wrap pt-8">
 	{#each exeriences as exerience}
 		<div class="w-1/2 min-w-80 max-w-xl {size === 'sm' ? 'py-2' : 'py-4'}">
 			<div class="flex items-center">

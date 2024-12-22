@@ -4,6 +4,7 @@
 	import { navs } from '$lib/data/navs';
 
 	import '../app.css';
+	import '../dracula.css';
 	let { children } = $props();
 </script>
 

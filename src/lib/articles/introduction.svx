@@ -1,4 +1,5 @@
 ---
+ignore: yes
 title: नमस्कार 🙏🏽 (Namaskar)
 published: Dec 11, 2024
 ---

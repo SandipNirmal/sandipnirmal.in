@@ -1,6 +1,36 @@
 <script lang="ts">
 	import Experience from '$lib/components/Experience.svelte';
 	import Social from '$lib/components/Social.svelte';
+
+	const skills = [
+		`Javascript`,
+		'Svelte',
+		'React',
+		'VueJS',
+		'Angular',
+		'NodeJS',
+		'MongoDB',
+		'Go lang',
+		'GraphQL',
+		'Test automation',
+		'System Design',
+		'System Architecture',
+		'Vite',
+		'CSS'
+	];
+
+	const education = [
+		{
+			institute: 'Amravati University, Amravati',
+			course: 'Bachelor of Computer Science and Engineering',
+			duration: '2007 - 2011'
+		},
+		{
+			institute: 'Jawahar Navodaya Vidyalaya, Amravati',
+			course: 'High School',
+			duration: ''
+		}
+	];
 </script>
 
 <article>
@@ -9,6 +39,7 @@
 			<h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
 				Sandip Nirmal
 			</h1>
+
 			<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
 				I’m Sandip Nirmal, a seasoned software developer with over a decade of experience in web and
 				mobile development. I am currently working as a fullstack developer Atlassian. Before
@@ -27,7 +58,10 @@
 				marathon in the Bengaluru 2024 Marathon.
 			</p>
 
-			<Social />
+			<div>
+				<Social />
+				<button class="px-3 py-2">Download CV</button>
+			</div>
 		</div>
 		<div class="flex flex-1 items-center justify-center py-12 md:py-0">
 			<enhanced:img
@@ -40,5 +74,31 @@
 	<section class="py-12">
 		<h2 class="text-3xl font-bold">Experience</h2>
 		<Experience size="md" />
+	</section>
+
+	<section class="py-12">
+		<h2 class="text-3xl font-bold">Education</h2>
+		{#each education as course}
+			<div class="pt-8">
+				<div class="flex items-center pb-2">
+					<h4 class="text-2xl font-semibold">{course.institute}</h4>
+					<span class="ml-8 text-sm text-zinc-700 dark:text-zinc-200">{course.duration}</span>
+				</div>
+				<div class="tracking-wider">{course.course}</div>
+			</div>
+		{/each}
+	</section>
+
+	<section class="py-12">
+		<h2 class="text-3xl font-bold">Skills</h2>
+		<ul class="flex flex-wrap py-2">
+			{#each skills as skill}
+				<li
+					class="m-1 rounded-md bg-zinc-700 px-2 py-0.5 text-sm text-white shadow-md dark:bg-slate-100 dark:text-zinc-900"
+				>
+					{skill}
+				</li>
+			{/each}
+		</ul>
 	</section>
 </article>

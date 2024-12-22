@@ -1,0 +1,160 @@
+---
+title: Introduction to PWA
+published: Sep 18, 2018
+---
+
+# { title }
+{published}
+
+![](https://ionic.io/blog/wp-content/uploads/2016/05/what-is-pwa-img.png)
+
+<center class="text-xs">
+Image Source: https://blog.ionicframework.com/what-is-a-progressive-web-app/
+</center>
+
+You might have heard of Progressive Web Applications or PWA in short, but what is Progressive Web App (PWA)? In this post, we are going to explore what makes a web app a PWA. And its advantages over normal web application and current development stack. And why should we consider building PWA?
+
+## Web Application
+
+A web application is a piece of software which run in the browser. We all know websites are something which sits somewhere on the remote server and we can access them over the internet using HTTP. Basically, it’s an application which requires browser and internet connection to work.
+
+And if we don’t have the internet connection then we get to see something like this.
+
+![](https://cdn-images-1.medium.com/max/2000/0*KYDsgt1XJlfGy3xk)
+
+In short, web applications are connectivity dependent. And this is biggest disadvantage of web apps over other app stack or over native apps.
+
+There is a solution to this problem and that’s PWA (Progressive Web Apps).
+
+## What is PWA
+
+Progressive Web Apps are user experiences that have the reach of the web, and which feel and behaves more like a native app instead of feeling like a web app. And this can be done using only web technology stack i.e. HTML and JavaScript instead of using external frameworks.
+
+The web application has following features falls under the category of PWA.
+
+**Must-Have**
+
+* Safe (Originates from Secure connection) — should be served over HTTPS.
+
+* Loads while offline — should be able to access independent of internet
+
+* Installable — should be able to install on users device
+
+**Good to Have**
+
+* Responsive — Suits any device form factor
+
+* Re-engageable — should engage user using push notification
+
+* App-like — Styled to look like a native app
+
+There are few more which are listed in [Google developer forum](https://developers.google.com/web/progressive-web-apps/). But for now, let’s discuss these.
+
+## Why PWA?
+
+* 55% of entire web traffic is from mobile devices. Mobile devices are much slower than the desktop machines hence loads contents slower as compared to desktops. And being online first entire website needs to be reloaded on every site visit. Whereas native apps score big with there offline first experience. PWA’s offline first approach can solve this problem.
+
+* Unreliable mobile networks — most of the time we access websites using which are not reliable especially in developing countries. Which leads to slow app load.
+
+* Today most of the modern browsers support many native features like location, camera, vibration etc. We can create web apps for catering these user app requirements. You can check browser support over [here](https://whatwebcando.today/).
+
+* Reduced development efforts. In current application development efforts, 90% application has following versions.
+
+    Web/Desktop + Android + iOS + Windows
+
+With PWA we have to build a PWA app and an iOS app. PWA will cover all other Platforms. (Recently Safari 12 has added support for Service Worker, which will enable to use PWA on iOS as well.)
+
+    PWA
+
+* App Store free distribution. Current app store revenue share is 70–30, but with PWA developer can distribute apps without the Google Play Store (Apple App Store in future). And if developers integrate payment gateways in their Web Apps they can make more money than they make from the Google Play Store.
+
+Let’s now discuss how to develop a Progressive Web App.
+
+## Taking App Offline (Connectivity independent)
+
+There have been previous attempts to add the offline capability to the web, but all have few flaws. But now we have 2 brand new browser API which makes this possible.
+
+**Service Worker**
+
+**Caches**
+
+**Service worker **— It’s an event-driven script which runs on client or origin. Which has few events, we will discuss them in short time.
+
+As I said service worker is the script which runs at client origin. It sits between the web app and the internet.
+
+Once registered, it acts as a network proxy. And every request originating from the client goes through it.
+
+And since service worker is a script which sits on client developer has full control over all outgoing request.
+
+It might sound difficult but it is very easy to code.
+
+**Caches — **Browser has cache implementation for years now. So what’s different with Caches API?
+
+Until now it was the browser which used to decide what to cache and for how long to cache. But with the addition of this new promise based **Caches API** developer has full control over the cache. It is the developer who decides what to store in cache and when to delete it.
+
+So, now the developer has control over network and cache. And that is enough to get web app working offline.
+
+We need to use Service Worker and the Caches API to make app offline.
+
+## Service Worker Events
+
+**Install** — It is fired when the app is accessed for the first time. And this is the event where the developer should store everything (bare minimum) in the cache.
+
+**fetch** — It is fired when the user tries to requests (fetch) something from the network. Service Worker acts as a network proxy and it takes control of all network request. Here developer has full control and can serve the user with data from the network or from the cache in case of no internet. So the user can get the data even when there is no network connection.
+
+**activate** — This is also a lifecycle event which gets triggered just after install event. This event should be used to clean up cached data of previous Service Workers if any. So, by handling this we can make sure we always have the fresh copy of the application in the Cache.
+
+## Making App installable
+
+Till now we have discussed how we can make web app work without internet connection. Let’s now discuss the other aspect that is installing them on phone.
+
+With PWA we can install (add to home screen) web app on mobile devices and can also add features like the splash screen. To achieve all this we need to add a simple manifest. file with few basic properties. Using these file browsers will be able to distinguish between the web app and PWA.
+
+*App Manifest*
+<div class="aspect-w-16 aspect-h-9">
+<img src="https://cdn-images-1.medium.com/max/2636/1*z4oNnlqlXov4Yyl70iVceg.png" />
+</div>
+
+When user access PWA, browser (modern browsers) will prompt the user with install banner by reading properties from manifest.json.
+
+## Resources
+
+Following is the list of resources provided by Google which will help you get started with PWA and to make really great Progressive Web App.
+
+1. [Google PWA training slides](https://drive.google.com/drive/folders/0B5Kg0X0yIQ1PNzRsSGJfU3dkZGc)
+
+1. [PWA Training Videos](https://youtu.be/_ZBcoKidTew)
+
+1. [PWA training Concepts](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-concepts/content/)
+
+1. [PWA training Code labs](https://google-developer-training.gitbooks.io/progressive-web-apps-ilt-codelabs/content/)
+
+1. [PWA Training code labs GitHub repo](https://github.com/google-developer-training/pwa-training-labs)
+
+## Demo Apps
+
+Following are small demo PWA with above-mentioned features.
+
+1. [https://sandipnirmal.github.io/weather-app-PWA/](https://sandipnirmal.github.io/weather-app-PWA/)
+
+1. [https://sandipnirmal.github.io/CountDownTimer/](https://sandipnirmal.github.io/CountDownTimer/)
+
+You can also look into the code base for the same.
+
+1. [https://github.com/SandipNirmal/weather-app-PWA](https://github.com/SandipNirmal/weather-app-PWA) (Vanilla JS PWA)
+
+1. [https://github.com/SandipNirmal/CountDownTimer](https://github.com/SandipNirmal/CountDownTimer) (React PWA)
+
+## Browser Support
+
+PWA is an effort started by Google so Google Chrome has a head start in this regard. But other browsers like Firefox and Opera (based on Chrome’s Blink engine) has great support for PWA.
+
+Service Workers has landed in Safari 11+. This will enable us to build PWA for iOS devices as well.
+
+Along with Safari Service Workers are also available in Microsoft Edge browser.
+
+You can check browser support over [here](https://jakearchibald.github.io/isserviceworkerready/index.html).
+
+## Conclusion
+
+Progressive web apps are the future of fast, offline first, re-engaging web applications. Web applications which work with, without and in poor internet connection. Web applications which can replace native mobile apps with the native app like features and performance, hence making a truly cross-platform app from the single code base.

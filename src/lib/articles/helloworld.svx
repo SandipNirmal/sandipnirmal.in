@@ -1,6 +1,8 @@
 ---
+ignore: yes
 title: Hello World
 published: Dec 21, 2024
+blurb:
 ---
 
 # { title }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Experience from '$lib/components/Experience.svelte';
+	// import Experience from '$lib/components/Experience.svelte';
 	import Social from '$lib/components/Social.svelte';
 </script>
 
@@ -27,10 +27,10 @@
 				<Social />
 			</div>
 		</div>
-		<div class="my w-80 pt-16">
+		<!-- <div class="my w-80 pt-16">
 			<h4 class="text-xl font-semibold">Work Experience</h4>
 			<Experience size="sm" />
-		</div>
+		</div> -->
 	</section>
 	<section class="py-8">
 		<h4 class="text-xl font-semibold">Recent Articles</h4>
