@@ -10,7 +10,7 @@
 </svelte:head>
 
 <article>
-	<section class="flex flex-wrap justify-between">
+	<section class="flex flex-wrap justify-between px-4">
 		<div class="max-w-3xl">
 			<div>
 				<h1 class="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
@@ -34,7 +34,7 @@
 		</div> -->
 	</section>
 	<section class="py-16">
-		<h3 class="pb-6 text-2xl font-semibold">Recent Articles</h3>
+		<h3 class="px-4 pb-6 text-2xl font-semibold">Recent Articles</h3>
 		<Articles />
 	</section>
 </article>

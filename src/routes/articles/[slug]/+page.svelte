@@ -2,8 +2,10 @@
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
+	import type { SvelteComponent } from 'svelte';
 
-	const component = data.component;
+	// @ts-expect-error component type mismatch
+	const Component: SvelteComponent = data.component;
 </script>
 
-<svelte:component this={component} />
+<Component />

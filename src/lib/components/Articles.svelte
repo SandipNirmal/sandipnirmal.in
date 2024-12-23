@@ -4,12 +4,11 @@
 	import type { Article } from '$lib/types/types';
 	import ArticleCard from './ArticleCard.svelte';
 
+	import allArticles from '$lib/data/articlesBlob.json';
+
 	let articles: Article[] = [];
 
 	onMount(async () => {
-		const res = await fetch('src/lib/data/articlesBlob.json');
-		const allArticles = await res.json();
-
 		articles = getLatestArticles(allArticles);
 	});
 

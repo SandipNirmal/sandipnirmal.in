@@ -60,7 +60,7 @@
 
 			<div>
 				<Social />
-				<button class="px-3 py-2">Download CV</button>
+				<!-- <button class="px-3 py-2">Download CV</button> -->
 			</div>
 		</div>
 		<div class="flex flex-1 items-center justify-center py-12 md:py-0">

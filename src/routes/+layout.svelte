@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onNavigate } from '$app/navigation';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import { navs } from '$lib/data/navs';
@@ -6,6 +7,17 @@
 	import '../app.css';
 	import '../dracula.css';
 	let { children } = $props();
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <div
