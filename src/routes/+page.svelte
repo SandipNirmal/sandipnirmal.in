@@ -19,10 +19,11 @@
 					I’m Sandip Nirmal, a Software developer and amateur runner.
 				</h1>
 				<p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-					I’m Sandip Nirmal, a seasoned software developer with over a decade of experience in web
-					and mobile development. I am currently working as a fullstack developer Atlassian. Before
-					joining Atlassian, I had worked with couple of startup and esteemed organisation across
-					EdTech, FinTech domains.
+					I'm Sandip Nirmal a software professional with over a decade of expertise in full-stack
+					development, specializing in web technologies. Currently serving as a Full Stack Developer
+					at Atlassian, I brings extensive experience in architecting and delivering robust software
+					solutions. Prior to joining Atlassian, I had work across different sectors which includes
+					EdTech, Fintech, etc.
 				</p>
 
 				<Social />
@@ -34,7 +35,7 @@
 		</div> -->
 	</section>
 	<section class="py-16">
-		<h3 class="px-4 pb-6 text-2xl font-semibold">Recent Articles</h3>
+		<h2 class="px-4 pb-6 text-2xl font-semibold">Recent Articles</h2>
 		<Articles />
 	</section>
 </article>
