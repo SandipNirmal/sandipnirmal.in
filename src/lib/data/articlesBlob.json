@@ -1,12 +1,23 @@
 {
-  "Compound-Components-with-React-Context-API": {
+  "compound-components-with-react-context-api": {
     "title": "Compound Components with React Context API",
-    "published": "Dec 21, 2024",
-    "slug": "Compound-Components-with-React-Context-API"
+    "published": "Feb 23, 2019",
+    "blurb": "Compound components represent a pattern where multiple components work together cohesively, enabling implicit state sharing between them.",
+    "slug": "compound-components-with-react-context-api",
+    "timestamp": 1550860200000
   },
-  "Introduction-to-PWA": {
+  "introduction-to-pwa": {
     "title": "Introduction to PWA",
     "published": "Sep 18, 2018",
-    "slug": "Introduction-to-PWA"
+    "blurb": "Progressive Web Apps are user experiences that have the reach of the web, and which feel and behaves more like a native app instead of feeling like a web app. And this can be done using only web technology stack i.e. HTML and JavaScript instead of using external frameworks.",
+    "slug": "introduction-to-pwa",
+    "timestamp": 1537209000000
+  },
+  "simple-math-to-solve-ui-problem": {
+    "title": "Simple Math to Solve UI Problem",
+    "published": "Feb 24, 2019",
+    "blurb": "We all know mathematics is an important part of Computer Science, but we really don’t use it much in our daily programming. Since most of the mathematical stuff is already done or available to us in all programming language.",
+    "slug": "simple-math-to-solve-ui-problem",
+    "timestamp": 1550946600000
   }
 }

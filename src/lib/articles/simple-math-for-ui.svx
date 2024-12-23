@@ -1,0 +1,59 @@
+---
+title: Simple Math to Solve UI Problem
+published: Feb 24, 2019
+blurb: We all know mathematics is an important part of Computer Science, but we really don’t use it much in our daily programming. Since most of the mathematical stuff is already done or available to us in all programming language.
+---
+
+# { title }
+{published}
+
+## Introduction
+
+We all learned mathematics in school and colleges. For few of us it was an interesting subject, but for some, it was a challenging subject. So, in short, everyone has a love/hate relationship with mathematics.
+
+We all know mathematics is an important part of Computer Science, but we really don’t use it much in our daily programming. Since most of the mathematical stuff is already done or available to us in all programming language.
+
+Recently I came across a situation where I’ve to build a UI component. Its styling was changing with the component’s height and width. So I decided to try some math to trick for help and it came out well.
+
+## Problem Statement
+
+I had a product card component in variable sizes, and it has active/inactive state. In case if card is inactive, I’ve to add a line (cross) running diagonally from top right corner to bottom left corner of card. Just like following image:
+
+![](https://cdn-images-1.medium.com/max/2000/1*NwbkYJ2jZ6GivZPWepAjdg.png)
+
+This can be achieved using little CSS transform, by rotating line at a certain angle. And it is okay if we have a single card, we can get the angle easily. But we have to achieve it for cards of all different sizes.
+
+If one looks properly, the above image looks like a **Pythagoras Theorem** we all learned in school. But most of us have never used it outside our academics (including me). Now, it was time to apply it to solve this problem.
+
+## Solution
+
+There are a few things we need to get the final result. We need to calculate the **length of the line** and the **angle it is inclined** to.
+
+But since it is a right angle triangle, our line length becomes **hypotenuse** and angle becomes **cosine** angle. Both these things can be easily calculated using the **Pythagoras theorem **if height and width are known. And that we already know.
+
+I was solving this problem in JavaScript and it has great support for mathematical function. Using all the above-described things, I wrote the following function. And it worked like a charm.
+
+```js
+const calculateStyle = (width, height) => {
+    // Calculate Hypotenuse
+    const hypot = Math.hypot(width, height);
+
+    //Calculate angle
+    const angle = (Math.asin(height / hypot) * 180) / Math.PI;
+
+    return {
+    width: hypot,
+    transform: `rotate(${90 + (90 - angle)}deg)`,
+    top: height / 2,
+    left: -(hypot - width) / 2
+    };
+};
+```
+
+You can check out the complete example below. Try changing width and height to different values and you should get a correct result every time.
+
+<iframe src="https://medium.com/media/589372462844fb392a760f14377d5b4e" frameborder=0></iframe>
+
+## Conclusion
+
+It’s easy to use mathematical functions in your code and it reduces your code by many folds. Along with that, it makes it more readable and testable and reliable.

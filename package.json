@@ -7,8 +7,9 @@
 		"node": "18.20.4"
 	},
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
+		"extract-blogs": "node src/scripts/blogCollector.js",
+		"dev": "pnpm run extract-blogs && vite dev",
+		"build": "pnpm run extract-blogs && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",

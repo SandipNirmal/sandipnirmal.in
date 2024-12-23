@@ -1,11 +1,13 @@
+// @ts-expect-error import
 import fs from 'node:fs';
 
-const ARTICLES_PATH = '../lib/articles';
+const ARTICLES_PATH = 'src/lib/articles';
 
-const articlesData: Record<string, Record<string, string>> = {};
+const articlesData = {};
 
-function convertTitleToSlug(title: string): string {
-	return title.replaceAll(' ', '-');
+// @ts-expect-error typing
+function convertTitleToSlug(title) {
+	return title.replaceAll(' ', '-').toLowerCase();
 }
 
 for (const file of fs.readdirSync(ARTICLES_PATH)) {
@@ -22,14 +24,17 @@ for (const file of fs.readdirSync(ARTICLES_PATH)) {
 
 			if (!shouldIgnore || shouldIgnore === 'no') {
 				const slug = convertTitleToSlug(title);
+				// @ts-expect-error record
 				articlesData[slug] = {
 					title,
 					published,
 					blurb,
-					slug
+					slug,
+					timestamp: new Date(published).getTime()
 				};
 			}
 		}
 	}
 }
-await fs.writeFileSync('../lib/data/articlesBlob.json', JSON.stringify(articlesData, null, 2));
+
+fs.writeFileSync('src/lib/data/articlesBlob.json', JSON.stringify(articlesData, null, 2));

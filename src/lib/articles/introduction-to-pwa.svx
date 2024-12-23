@@ -1,6 +1,7 @@
 ---
 title: Introduction to PWA
 published: Sep 18, 2018
+blurb: Progressive Web Apps are user experiences that have the reach of the web, and which feel and behaves more like a native app instead of feeling like a web app. And this can be done using only web technology stack i.e. HTML and JavaScript instead of using external frameworks.
 ---
 
 # { title }

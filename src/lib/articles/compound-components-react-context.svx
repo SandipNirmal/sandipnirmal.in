@@ -1,6 +1,7 @@
 ---
 title: Compound Components with React Context API
-published: Dec 21, 2024
+published: Feb 23, 2019
+blurb: Compound components represent a pattern where multiple components work together cohesively, enabling implicit state sharing between them.
 ---
 
 # { title }

@@ -1,5 +1,17 @@
 <script lang="ts">
-	const {} = $props();
+	const { title, timestamp, slug, blurb } = $props();
 </script>
 
-<article></article>
+<article>
+	<a href={`articles/${slug}`}>
+		<div
+			class="border-l-2 border-transparent p-4 transition-all duration-300 hover:border-zinc-300"
+		>
+			<h4 class="text-xl font-semibold">{title}</h4>
+			<span class="text-xs text-zinc-600 dark:text-zinc-400">
+				Published: {new Date(timestamp).toDateString()}
+			</span>
+			<p class="py-2 text-sm">{blurb}</p>
+		</div>
+	</a>
+</article>
