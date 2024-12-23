@@ -4,7 +4,7 @@
 
 <article>
 	<a href={`articles/${slug}`}>
-		<div class="px-4 py-5 transition-all duration-300 hover:bg-zinc-800">
+		<div class="px-4 py-5 hover:bg-zinc-100 hover:shadow-sm dark:hover:bg-zinc-800">
 			<h4 class="text-xl font-semibold">{title}</h4>
 			<span class="text-xs text-zinc-600 dark:text-zinc-400">
 				Published: {new Date(timestamp).toDateString()}

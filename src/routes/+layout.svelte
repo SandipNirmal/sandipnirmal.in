@@ -29,11 +29,11 @@
 		<div class="px-4 py-3 lg:px-8">
 			<div class="mx-auto max-w-7xl">
 				<header class="relative flex items-center">
-					<h2 class="font-bold sm:text-2xl dark:text-white">
-						<a href="/">
+					<a href="/">
+						<h2 class="font-bold sm:text-2xl dark:text-white">
 							<img src="/logo.png" alt="Sandip Nirmal" class="h-16 w-16 rounded-full" />
-						</a>
-					</h2>
+						</h2>
+					</a>
 					<div class="relative ml-auto flex flex-row-reverse items-center sm:flex-row">
 						<Navbar />
 						<div class="mx-2 flex items-center pl-2 sm:mx-4 sm:pl-6">

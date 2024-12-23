@@ -112,7 +112,7 @@ Till now we have discussed how we can make web app work without internet connect
 With PWA we can install (add to home screen) web app on mobile devices and can also add features like the splash screen. To achieve all this we need to add a simple manifest. file with few basic properties. Using these file browsers will be able to distinguish between the web app and PWA.
 
 *App Manifest*
-<div class="aspect-w-16 aspect-h-9">
+<div class="aspect-w-16 aspect-h-9 flex justify-center">
 <img src="https://cdn-images-1.medium.com/max/2636/1*z4oNnlqlXov4Yyl70iVceg.png" />
 </div>
 
