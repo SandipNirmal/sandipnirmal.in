@@ -8,4 +8,8 @@
 	const Component: SvelteComponent = data.component;
 </script>
 
+<svelte:head>
+	<title>{data.title}</title>
+	<meta name="description" content={data.blurb} />
+</svelte:head>
 <Component />

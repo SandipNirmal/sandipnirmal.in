@@ -29,10 +29,8 @@
 		<div class="px-4 py-3 lg:px-8">
 			<div class="mx-auto max-w-7xl">
 				<header class="relative flex items-center">
-					<a href="/">
-						<h2 class="font-bold sm:text-2xl dark:text-white">
-							<img src="/logo.webp" alt="Sandip Nirmal" class="h-16 w-16 rounded-full" />
-						</h2>
+					<a href="/" class="font-bold sm:text-2xl dark:text-white">
+						<img src="/logo.webp" alt="Sandip Nirmal" class="h-16 w-16 rounded-full" />
 					</a>
 					<div class="relative ml-auto flex flex-row-reverse items-center sm:flex-row">
 						<Navbar />

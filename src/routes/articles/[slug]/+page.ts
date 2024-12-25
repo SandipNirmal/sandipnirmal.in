@@ -8,8 +8,12 @@ import allArticles from '$lib/data/articlesBlob.json';
 
 export const load: PageLoad = ({ params }) => {
 	if (articles[params.slug]) {
+		// @ts-expect-error json
+		const { title, blurb } = allArticles[params.slug];
 		return {
-			component: articles[params.slug]
+			component: articles[params.slug],
+			title,
+			blurb
 		};
 	}
 

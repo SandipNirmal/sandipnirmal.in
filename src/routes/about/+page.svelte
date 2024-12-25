@@ -33,6 +33,17 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Sandip Nirmal | About</title>
+	<meta
+		name="description"
+		content="I’m Sandip Nirmal, a seasoned software developer with over a decade of experience in web and
+				mobile development. I am currently working as a fullstack developer Atlassian. Before
+				joining Atlassian, I had worked with couple of startup and esteemed organisation across
+				EdTech, FinTech domains."
+	/>
+</svelte:head>
+
 <article>
 	<section class="flex flex-wrap">
 		<div class="min-w-80 max-w-2xl">
@@ -81,7 +92,7 @@
 		{#each education as course}
 			<div class="pt-8">
 				<div class="flex items-center pb-2">
-					<h4 class="text-2xl font-semibold">{course.institute}</h4>
+					<h3 class="text-2xl font-semibold">{course.institute}</h3>
 					<span class="ml-8 text-sm text-zinc-700 dark:text-zinc-200">{course.duration}</span>
 				</div>
 				<div class="tracking-wider">{course.course}</div>
