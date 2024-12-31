@@ -19,7 +19,7 @@ Recently I came across a situation where I’ve to build a UI component. Its sty
 
 I had a product card component in variable sizes, and it has active/inactive state. In case if card is inactive, I’ve to add a line (cross) running diagonally from top right corner to bottom left corner of card. Just like following image:
 
-![](https://cdn-images-1.medium.com/max/2000/1*NwbkYJ2jZ6GivZPWepAjdg.png)
+![](/assets/articles/simple_math.png)
 
 This can be achieved using little CSS transform, by rotating line at a certain angle. And it is okay if we have a single card, we can get the angle easily. But we have to achieve it for cards of all different sizes.
 
@@ -52,7 +52,12 @@ const calculateStyle = (width, height) => {
 
 You can check out the complete example below. Try changing width and height to different values and you should get a correct result every time.
 
-<iframe src="https://medium.com/media/589372462844fb392a760f14377d5b4e" frameborder=0></iframe>
+<iframe src="https://codesandbox.io/embed/614q3yqyrr?view=preview&module=%2Fsrc%2Findex.js&hidenavigation=1"
+     style="width:100%; height: 500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="Inactive Card Cross"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 
 ## Conclusion
 
