@@ -43,6 +43,7 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@vercel/speed-insights": "^1.1.0",
 		"phaser": "^3.87.0"
 	}
 }

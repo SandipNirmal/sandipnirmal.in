@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 	import { onNavigate } from '$app/navigation';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
@@ -7,6 +8,8 @@
 	import '../app.css';
 	import '../dracula.css';
 	let { children } = $props();
+
+	injectSpeedInsights();
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
