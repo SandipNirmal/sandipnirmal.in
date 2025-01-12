@@ -35,7 +35,6 @@
 		</div> -->
 	</section>
 	<section class="py-16">
-		<h2 class="px-4 pb-6 text-2xl font-semibold">Recent Articles</h2>
 		<Articles />
 	</section>
 </article>

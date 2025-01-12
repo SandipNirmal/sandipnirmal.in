@@ -19,6 +19,7 @@
 	}
 </script>
 
+<h2 class="px-4 pb-6 text-2xl font-bold">Recent Articles</h2>
 <div>
 	{#each articles as article}
 		<ArticleCard {...article} />

@@ -1,0 +1,57 @@
+---
+ignore: yes
+title: Tools and Technologies Behind This Website
+published: Jan 10, 2025
+blurb: Explore the development stack, frameworks, and tools that power this custom website. Learn about the tech choices that make it possible.
+---
+
+# { title }
+{published}
+
+## Finally, I did it
+
+After years of planning and procrastination, I finally decided to create my own dedicated space on the web. I wanted a central hub where I could
+share blog posts, showcase projects, and document my technical explorations. While I previously published some content on Medium, those posts have
+grown outdated. Having everything consolidated in one place, rather than scattered across Medium, CodeSandbox, and other platforms, allows for a
+more cohesive experience. This project also gave me the perfect opportunity to experiment with Svelte 5 and put its capabilities to the test.
+
+## Core Technologies
+
+The primary UI library powering this website is [Svelte](https://svelte.dev), specifically its full-featured framework [SvelteKit](https://svelte.dev/docs/kit/introduction). Let's explore the technical details in the sections below.
+
+### UI Library/Framework
+
+#### SvelteKit
+
+Svelte excels at building web UI components, but creating a complete web application requires additional functionality. SvelteKit extends Svelte by providing several essential features by default:
+
+** Routing **
+
+SvelteKit implements directory-based routing similar to NextJS, offering flexibility between Client Side Routing (CSR), Server Side Routing (SSR), and page prerendering at build time through simple configuration. Given my goals of creating both a blog and demo showcase site, I required both prerendering and CSR capabilities.
+
+The articles on this site are prerendered during the build process. While this could potentially impact build times, it remains manageable for a personal website's publishing cadence. If needed, the build process can be optimized to only prerender new or modified articles.
+
+To avoid manually creating routes for each new article, SvelteKit offers dynamic routing functionality. Since dynamic routes aren't prerendered by default, I leverage SvelteKit's [Page entries](https://svelte.dev/docs/kit/page-options#entries) feature to enable prerendering for these dynamic routes.
+
+** [Image Optimisation](https://svelte.dev/docs/kit/images) **
+
+SvelteKit provides a plugin `@sveltejs/enhanced-img`, which generates images of multiple sizes and format at the build time. i.e. even if you're using `jpeg` it will generate `webp`, `avif` which are more optimised for web.
+
+** [Preloading](https://svelte.dev/docs/kit/link-options#data-sveltekit-preload-data) **
+
+SvelteKit provide option to start fetch next route as soon as user hovers over link instead of clicking. So, by the time user clicks the link, next route is almost fetched. Which gives near instant feel.
+This can be done via `data-sveltekit-preload-data` attribute ex. `data-sveltekit-preload-data="hover"`.
+
+* Styling Solution
+* Build Tools
+
+## Development Workflow
+
+* Version Control
+* CI/CD Pipeline
+* Code Quality Tools
+* Development Environment
+
+## Code
+
+Code is available on <a href="https://github.com/sandipnirmal/sandipnirmal.in" target="_blank">Github</a>.

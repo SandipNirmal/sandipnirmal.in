@@ -8,6 +8,5 @@
 </svelte:head>
 
 <section>
-	<h2 class="p-4 text-2xl font-bold">Recent Articles</h2>
 	<Articles />
 </section>
