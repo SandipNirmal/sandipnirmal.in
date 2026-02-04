@@ -3,6 +3,10 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"engines": {
+		"node": "24.13.0"
+	},
+	"packageManager": "pnpm@10.14.0",
 	"scripts": {
 		"extract-blogs": "node src/scripts/blogCollector.js",
 		"dev": "pnpm run extract-blogs && vite dev",
