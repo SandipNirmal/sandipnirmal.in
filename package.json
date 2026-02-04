@@ -43,7 +43,9 @@
 		"vitest": "^2.0.4"
 	},
 	"dependencies": {
+		"@tanstack/svelte-query": "^6.0.18",
 		"@vercel/speed-insights": "^1.1.0",
+		"lucide-svelte": "^0.563.0",
 		"phaser": "^3.87.0"
 	}
 }

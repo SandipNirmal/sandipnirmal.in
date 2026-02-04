@@ -5,6 +5,11 @@ export const navs = [
 		enabled: true
 	},
 	{
+		name: 'Practice',
+		link: '/practice',
+		enabled: true
+	},
+	{
 		name: 'Apps',
 		link: '/apps',
 		enabled: false
