@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"engines": {
-		"node": "22.x"
+		"node": "22"
 	},
 	"scripts": {
 		"extract-blogs": "node src/scripts/blogCollector.js",
